@@ -19,3 +19,14 @@ This first commit contains only this README. Before creating the addon, it helps
 An Odoo addon needs a Python package and a manifest before Odoo can discover it. This chapter adds `__init__.py` and `__manifest__.py` to `estate`. The manifest gives the addon a name, declares its dependency on `base`, and sets `application=True` so it appears under the Apps filter.
 
 The addon is an empty shell at this point. It can be installed, but it has no model or menu yet. That separation makes it easier to see what the manifest does before business features are added.
+
+## Chapter 3 - Models and basic fields
+
+[Official chapter](https://www.odoo.com/documentation/20.0/developer/tutorials/server_framework_101/03_basicmodel.html)
+
+The new `estate.property` model gives the application somewhere to store property records. Its Python class defines fields for the name, description, postcode, availability, prices, rooms, area, and garden details. The ORM maps the model to a PostgreSQL table named `estate_property`.
+
+`name` and `expected_price` are required because a useful property record needs both. `garden_orientation` stores one of four keys while showing readable labels in the interface. Odoo also adds fields such as `id` and `create_date` automatically; they do not need declarations in our class.
+
+**Try it:** Upgrade `estate` and inspect the `estate_property` table. Compare its columns with the Python fields, then find an automatic field that was not declared in `estate_property.py`.
+
