@@ -11,3 +11,11 @@ Odoo separates what you see in the browser, the Python code that handles busines
 This first commit contains only this README. Before creating the addon, it helps to know where each part of the real estate application belongs and why installing an addon affects a particular database.
 
 **Try it:** Find an existing addon in the repository. Locate its manifest, a model file, and a view file.
+
+## Chapter 2 - A new application
+
+[Official chapter](https://www.odoo.com/documentation/20.0/developer/tutorials/server_framework_101/02_newapp.html)
+
+An Odoo addon needs a Python package and a manifest before Odoo can discover it. This chapter adds `__init__.py` and `__manifest__.py` to `estate`. The manifest gives the addon a name, declares its dependency on `base`, and sets `application=True` so it appears under the Apps filter.
+
+The addon is an empty shell at this point. It can be installed, but it has no model or menu yet. That separation makes it easier to see what the manifest does before business features are added.
