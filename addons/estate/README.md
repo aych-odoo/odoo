@@ -119,3 +119,15 @@ A property can receive several offers. The new `estate.property.offer` model sto
 Offers have access rights and list and form views, but no separate menu. They are entered from the property's Offers tab, where Odoo fills in `property_id` automatically. This keeps an offer attached to the property it concerns.
 
 **Try it:** Add two offers from one property's Offers tab. Inspect each offer's buyer and `property_id`, then open another property and compare its offer list.
+## Chapter 8 - Computed fields and onchanges
+
+[Official chapter](https://www.odoo.com/documentation/20.0/developer/tutorials/server_framework_101/08_compute_onchange.html)
+
+A property's total area and best offer can be calculated from information already stored in Odoo. In this chapter, `total_area` adds the living and garden areas, while `best_price` selects the highest offer. `@api.depends` tells Odoo which changes require those values to be recalculated.
+
+Offers also gain a validity period and a deadline. The deadline is calculated from the creation date and validity; an inverse method lets you edit the deadline and have Odoo update the validity instead. For a new offer without a creation date yet, the calculation starts from today.
+
+The garden onchange fills in an area of 10 and a North orientation when Garden is selected, then clears them when it is deselected. This helper runs in the form. The computed fields also work when records are changed through code.
+
+**Try it:** Change a property's living area, add two offers, and edit an offer's deadline. Observe which other values change.
+
