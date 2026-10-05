@@ -109,3 +109,13 @@ Properties can now have several tags, and a tag can describe several properties.
 The `many2many_tags` widget shows tags compactly in the property list and form. This changes their presentation while the relationship remains a set of linked tag records.
 
 **Try it:** Create a tag such as Renovated, assign it to two properties, and add multiple tags to one property. Remove a tag from one property and check that the tag record still exists.
+
+## Chapter 7.3 - One2many fields
+
+[Official chapter](https://www.odoo.com/documentation/20.0/developer/tutorials/server_framework_101/07_relations.html)
+
+A property can receive several offers. The new `estate.property.offer` model stores each offer's price, status, buyer, and property. Its required `property_id` `Many2one` field identifies the property; the property's `offer_ids` `One2many` field shows all offers pointing back to it. The inverse field is essential because a `One2many` does not store a separate link on the property.
+
+Offers have access rights and list and form views, but no separate menu. They are entered from the property's Offers tab, where Odoo fills in `property_id` automatically. This keeps an offer attached to the property it concerns.
+
+**Try it:** Add two offers from one property's Offers tab. Inspect each offer's buyer and `property_id`, then open another property and compare its offer list.
