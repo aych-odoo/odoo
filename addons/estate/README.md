@@ -89,3 +89,13 @@ The search view lets users find properties by name, postcode, living area, or be
 The filter's domain decides which records are included; the grouping context changes how those records are displayed. Both operate on the existing property model, with no new fields.
 
 **Try it:** Create properties in two postcodes. Search by name, apply Available, and group by postcode. Change a property's state and see whether it still appears in the filtered results.
+
+## Chapter 7.1 - Many2one fields
+
+[Official chapter](https://www.odoo.com/documentation/20.0/developer/tutorials/server_framework_101/07_relations.html)
+
+`Many2one` links a property to one record in another model. Properties now link to a property type, a buyer, and a salesperson. The property type is a new model with its own access right, views, and Configuration menu. Buyers use the existing `res.partner` model, while salespeople use `res.users`, so the addon reuses Odoo's contacts and users.
+
+The type appears in the property list, form, and search views. The buyer and salesperson appear on an Other Info tab. The salesperson defaults to the current user, while a duplicated property does not copy its buyer.
+
+**Try it:** Create a property type, assign it to several properties, and search by type. Open Other Info and compare the buyer and salesperson fields with the records they reference.
