@@ -49,3 +49,13 @@ A window action tells Odoo which model to open. The new menu path, Real Estate >
 Odoo can display the existing `estate.property` fields using its generated list and form views. A custom view layout comes in Chapter 6; the menu already makes the model usable.
 
 **Try it:** Open Real Estate > Advertisements > Properties, create a property, and inspect the generated list and form views.
+
+## Chapter 5.2 - Field attributes and defaults
+
+[Official chapter](https://www.odoo.com/documentation/20.0/developer/tutorials/server_framework_101/05_firstui.html)
+
+The property model now supplies values that make new records ready to use. A new property starts with two bedrooms, an availability date three months ahead, and state New. The `active` field enables Odoo's standard archive behavior, while `state` records where the property is in its sales lifecycle.
+
+Availability date, selling price, and state use `copy=False`, so duplicating a property does not carry over those values from the original. Selling price is read-only in the form because accepting an offer will set it later. The defaults and copy behavior live on the model, so they also apply when records are created or duplicated through code.
+
+**Try it:** Create and duplicate a property. Compare their availability dates, selling prices, and states, then archive one property and look for it in the normal list.
