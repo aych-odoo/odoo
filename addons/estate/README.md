@@ -79,3 +79,13 @@ A property needs more space for editing than a row in the list provides. The for
 The Properties action already offers a form view. With this declaration installed, opening a property uses the designed layout instead of Odoo's generated form.
 
 **Try it:** Open a property from the list and find its postcode, expected price, and garden details. Move a field between groups in the XML and see where it appears in the form.
+
+## Chapter 6.3 - Search view
+
+[Official chapter](https://www.odoo.com/documentation/20.0/developer/tutorials/server_framework_101/06_basicviews.html)
+
+The search view lets users find properties by name, postcode, living area, or bedroom count. Its Available filter selects properties in New or Offer Received state. The Postcode group option arranges matching properties by location.
+
+The filter's domain decides which records are included; the grouping context changes how those records are displayed. Both operate on the existing property model, with no new fields.
+
+**Try it:** Create properties in two postcodes. Search by name, apply Available, and group by postcode. Change a property's state and see whether it still appears in the filtered results.
