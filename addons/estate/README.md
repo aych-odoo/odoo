@@ -69,3 +69,13 @@ Odoo can generate a list view, but a declared view lets us choose the columns th
 The XML view controls how the model's fields appear; it does not add or change database fields. Later views can present the same records in different ways.
 
 **Try it:** Open Properties and compare the displayed columns with the fields in `estate.property`. Change a column's position in the XML view and observe how the list changes.
+
+## Chapter 6.2 - Form view
+
+[Official chapter](https://www.odoo.com/documentation/20.0/developer/tutorials/server_framework_101/06_basicviews.html)
+
+A property needs more space for editing than a row in the list provides. The form view places the property name at the top, groups location and pricing details side by side, and puts descriptive features on a Description tab. Groups and pages organize existing model fields without changing how they are stored.
+
+The Properties action already offers a form view. With this declaration installed, opening a property uses the designed layout instead of Odoo's generated form.
+
+**Try it:** Open a property from the list and find its postcode, expected price, and garden details. Move a field between groups in the XML and see where it appears in the form.
