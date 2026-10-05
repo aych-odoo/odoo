@@ -13,6 +13,7 @@
                 <field name="name"/>
                 <field name="postcode"/>
                 <field name="property_type_id"/>
+                <field name="tag_ids" widget="many2many_tags"/>
                 <field name="bedrooms"/>
                 <field name="living_area"/>
                 <field name="expected_price"/>
@@ -35,6 +36,7 @@
                         <group>
                             <field name="postcode"/>
                             <field name="property_type_id"/>
+                            <field name="tag_ids" widget="many2many_tags"/>
                             <field name="date_availability"/>
                         </group>
                         <group>

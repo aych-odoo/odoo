@@ -99,3 +99,13 @@ The filter's domain decides which records are included; the grouping context cha
 The type appears in the property list, form, and search views. The buyer and salesperson appear on an Other Info tab. The salesperson defaults to the current user, while a duplicated property does not copy its buyer.
 
 **Try it:** Create a property type, assign it to several properties, and search by type. Open Other Info and compare the buyer and salesperson fields with the records they reference.
+
+## Chapter 7.2 - Many2many fields
+
+[Official chapter](https://www.odoo.com/documentation/20.0/developer/tutorials/server_framework_101/07_relations.html)
+
+Properties can now have several tags, and a tag can describe several properties. The `tag_ids` `Many2many` field stores that shared classification without duplicating tag names on every property. The new tag model has its own access right, views, and Configuration menu.
+
+The `many2many_tags` widget shows tags compactly in the property list and form. This changes their presentation while the relationship remains a set of linked tag records.
+
+**Try it:** Create a tag such as Renovated, assign it to two properties, and add multiple tags to one property. Remove a tag from one property and check that the tag record still exists.
