@@ -40,3 +40,12 @@ The tutorial text shows the older `ir.model.access.csv` layout. This Odoo 20 che
 
 **Try it:** Upgrade `estate` and check that its missing-access warning is gone. Compare property access for an internal user with access for a user outside that group.
 
+## Chapter 5.1 - Actions and menus
+
+[Official chapter](https://www.odoo.com/documentation/20.0/developer/tutorials/server_framework_101/05_firstui.html)
+
+A window action tells Odoo which model to open. The new menu path, Real Estate > Advertisements > Properties, links to that action. The manifest loads the action before the menus so the menu can refer to it.
+
+Odoo can display the existing `estate.property` fields using its generated list and form views. A custom view layout comes in Chapter 6; the menu already makes the model usable.
+
+**Try it:** Open Real Estate > Advertisements > Properties, create a property, and inspect the generated list and form views.
