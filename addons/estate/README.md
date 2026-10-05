@@ -59,3 +59,13 @@ The property model now supplies values that make new records ready to use. A new
 Availability date, selling price, and state use `copy=False`, so duplicating a property does not carry over those values from the original. Selling price is read-only in the form because accepting an offer will set it later. The defaults and copy behavior live on the model, so they also apply when records are created or duplicated through code.
 
 **Try it:** Create and duplicate a property. Compare their availability dates, selling prices, and states, then archive one property and look for it in the normal list.
+
+## Chapter 6.1 - List view
+
+[Official chapter](https://www.odoo.com/documentation/20.0/developer/tutorials/server_framework_101/06_basicviews.html)
+
+Odoo can generate a list view, but a declared view lets us choose the columns that matter when scanning properties. The new list shows each property's name, postcode, bedrooms, living area, expected and selling prices, and availability date. The existing property action opens this view when users select Properties from the menu.
+
+The XML view controls how the model's fields appear; it does not add or change database fields. Later views can present the same records in different ways.
+
+**Try it:** Open Properties and compare the displayed columns with the fields in `estate.property`. Change a column's position in the XML view and observe how the list changes.
